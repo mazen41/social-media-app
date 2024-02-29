@@ -1,0 +1,27 @@
+.App {
+    height: 100vh;
+    width: 100%;
+    /* background-color: #d4d9e17a; */
+}
+
+.App .dark {
+    background: #18191A !important;
+    color: white !important;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    background-color: transparent;
+
+}
+
+/* ::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: none;
+} */
+
+::-webkit-scrollbar-thumb {
+    background: #f9bc2d;
+    /* background-color: ; */
+    border-radius: 10px;
+}

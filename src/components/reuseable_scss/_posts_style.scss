@@ -1,0 +1,136 @@
+.popupForm {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: $box-shadow;
+  z-index: 99999;
+  animation: fadeIn 0.3s ease-in-out;
+  background: white;
+  border-radius: 6px;
+  transition: 0.6s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  display: none;
+  &.active {
+    display: flex;
+  }
+  .title {
+    // padding-top: 10px;
+    margin-top: -6px;
+    p {
+      color: #f9bc2d;
+      text-align: center;
+    }
+  }
+  .line {
+    margin-top: 8px;
+    width: 100%;
+    height: 1px;
+    background: #ffff;
+  }
+  .user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    img {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+    }
+  }
+  form {
+    // margin-top: 40px;
+    .input {
+      margin-top: 20px;
+      padding-left: 5px;
+      textarea {
+        border: none;
+        outline: none;
+      }
+    }
+  }
+  .photo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    img {
+      width: 30px;
+      cursor: pointer;
+    }
+  }
+  .accessibility {
+    display: flex;
+    gap: 25px;
+    margin-top: 12px;
+    div {
+      display: flex;
+      gap: 5px;
+      align-items: center;
+    }
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+    align-items: center;
+    .cancel {
+      display: flex;
+      border: 1px solid;
+      border-radius: 4px;
+      color: #f9bc2d;
+      transition: 0.5s;
+      cursor: pointer;
+      padding: 4px;
+      width: 65px;
+      align-items: center;
+      justify-content: center;
+    }
+    .cancel:hover {
+      background-color: #f9bc2d;
+      color: white;
+    }
+    .submit {
+      input {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 77px;
+        display: flex;
+        border: 1px solid;
+        border-radius: 4px;
+        color: #f9bc2d !important;
+        transition: 0.5s;
+        cursor: pointer;
+        background: none;
+        font-family: "Noto Sans", sans-serif;
+        font-size: 17px;
+        padding: 4px;
+        font-weight: 300;
+        border: 1px solid #f9bc2d;
+      }
+      input:hover {
+        background-color: #f9bc2d;
+        color: white;
+      }
+    }
+  }
+}
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9998;
+}
+.overlay.active {
+  display: block;
+}

@@ -1,0 +1,324 @@
+.dark {
+  color: white !important;
+}
+.dark input {
+  color: white !important;
+}
+.dark .form div .input .popup {
+  box-shadow: none !important;
+  background: #242526 !important;
+}
+.dark .form div .input .popup input {
+  background: #52525263 !important;
+}
+.dark .form .overlay {
+  background: rgba(50, 50, 50, 0.5) !important;
+}
+/* .dark .form .image img {
+  background: white !important;
+} */
+#root > .dark > div > div.settings > div.form > div.delete_acc > div.acc_popup > div.buttons div button {
+  color: white;
+  background: #52525263 !important;
+}
+#root > .dark > div > div.settings > div.form > div.delete_acc > div.acc_popup { 
+  background: #242526 !important;
+  box-shadow: none !important;
+}
+
+.settings {
+  position: absolute;
+  left: 18%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 81%;
+  top: 15%;
+}
+.settings .toast {
+  position: fixed;
+  border-radius: 12px;
+  background: #ffcccc;
+  padding: 20px 35px 20px 25px;
+  box-shadow: 0 6px 20px -5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transform: translateX(calc(-350% + 30px));
+  top: 89%;
+  left: -23%;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+}
+.settings .toast.success {
+  background: #59B660;
+}
+.settings .toast.active {
+  transform: translateX(106%);
+}
+.settings .toast .toast-content {
+  display: flex;
+  align-items: center;
+}
+.settings .toast-content .check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+  min-width: 35px;
+  background-color: #4070f4;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 50%;
+}
+.settings .toast-content .message {
+  display: flex;
+  flex-direction: column;
+  margin: 0 20px;
+}
+.settings .message .text {
+  font-size: 16px;
+  font-weight: 400;
+  color: #990000;
+}
+.settings .toast.success .message .text {
+  color: #111;
+}
+.settings .message .text.text-1 {
+  font-weight: 600;
+  color: #990000;
+}
+.settings .toast .close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  padding: 5px;
+  cursor: pointer;
+  opacity: 0.7;
+}
+.settings .toast .close:hover {
+  opacity: 1;
+}
+.settings .toast .progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+}
+.settings .toast .progress:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #4070f4;
+}
+.settings .progress.active:before {
+  animation: progress 5s linear forwards;
+}
+.settings .title {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.settings .title h2 {
+  color: #f9bc2d;
+  font-size: 25px;
+  font-weight: 400;
+}
+.settings .title .sm-title p {
+  color: #561bff;
+  font-weight: 400;
+  font-size: 13px;
+}
+.settings .line {
+  width: 100%;
+  height: 1px;
+  background: lightblue;
+}
+.settings .form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.settings .form .overlay {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #d4d9e17a;
+  z-index: 999999999999999999998;
+}
+.settings .form .image img {
+  width: 120px;
+  border-radius: 50%;
+}
+.settings .form .image .update button {
+  border: none;
+  background: #561bff;
+  color: white;
+  font-size: 15px;
+  border-radius: 8px;
+  outline: none;
+  padding: 9px;
+  cursor: pointer;
+  transition: 0.6s;
+}
+.settings .form div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.settings .form div .input {
+  width: 100%;
+}
+.settings .form div .input .show {
+  border: none;
+  background: #561bff;
+  color: white;
+  font-size: 15px;
+  border-radius: 8px;
+  outline: none;
+  padding: 9px;
+  cursor: pointer;
+  transition: 0.6s;
+  text-align: center;
+}
+.settings .form div .input .popup {
+  position: fixed;
+  left: 39%;
+  top: 35%;
+  background: white;
+  z-index: 999999999999999999999;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transition: 0.6s;
+  animation: zoomIn 0.5s ease-in-out;
+}
+.settings .form div .input .popup form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.settings .form div .input .popup .submit {
+  display: flex;
+  justify-content: space-between;
+}
+.settings .form div .input .popup .submit button {
+  border: none;
+  border-radius: 5px;
+  background: #f9bc2d;
+  cursor: pointer;
+  color: #111;
+  padding: 4px;
+  text-align: center;
+  width: 85px;
+  margin-left: 3px;
+}
+.settings .form div .input input {
+  border: 1px solid transparent;
+  border: 1px solid #1f1f1f;
+  border-radius: 8px;
+  width: 353px;
+  height: 34px;
+  font-size: 14px;
+  outline: none;
+  padding-left: 8px;
+}
+#root > div > div > div.settings > div.form > div.delete_acc > div.acc_popup {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  z-index: 999999;
+  background: white ;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: rgb(0 0 0 / 25%) 0px 25px 50px -12px;
+  left: 39%;
+  top: 35%;
+  transition: 0.4s;
+  animation: zoomIn 0.6s ease-in-out;
+}
+#root > div > div > div.settings > div.form > div.delete_acc > div.acc_popup .message {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  
+}
+#root > div > div > div.settings > div.form > div.delete_acc > div.acc_popup .message .md {
+  align-self: start;
+}
+#root > div > div > div.settings > div.form > div.delete_acc > div.acc_popup > div.buttons {
+  align-self: end;
+  display: flex;
+  gap: 25px;
+  margin-top: 10px;
+}
+#root > div > div > div.settings > div.form > div.delete_acc > div.acc_popup > div.buttons div button {
+  border: none;
+  color: white;
+  font-size: 15px;
+  border-radius: 8px;
+  outline: none;
+  padding: 9px;
+  cursor: pointer;
+  transition: 0.6s;
+  text-align: center;
+  background: lightgrey;
+  color: black;
+}
+#root > div > div > div.settings > div.form > div.delete_acc > div.acc_popup > div.buttons .submit button {
+  background: crimson !important;
+}
+
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@media (max-width: 992px) {
+  .settings {
+    left: 5%;
+  }
+}
+@media (max-width: 956px) {
+  #root > div > div > div.settings > div.form > div.delete_acc > div.acc_popup {
+    left: 20% !important;
+  }
+}
+@media (max-width: 655px) {
+  .settings .form div .input input {
+    width: 250px;
+  }
+
+  .settings .form div .input .popup {
+    left: 20% !important;
+  }
+}
+@media (max-width: 535px) {
+  .settings .form div .input input {
+    width: 180px;
+  }
+}
+@media (max-width: 730px) {
+  #root > div > div > div.settings > div.form > div.delete_acc > div.acc_popup {
+    left: 10% !important;
+  }
+}
+/*# sourceMappingURL=settings.css.map */

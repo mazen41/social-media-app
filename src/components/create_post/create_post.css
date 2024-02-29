@@ -1,0 +1,409 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;1,200;1,300;1,400&family=Signika:wght@300;400;500;600&display=swap");
+body {
+  background-color: #ffff;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.dark {
+  background: #18191A !important;
+}
+.create_post .new_post img {
+  background: white !important;
+}
+.dark .new_post {
+  background: #242526;
+  box-shadow: none !important;
+}
+.dark .new_post .post div {
+  background: #3A3B3C !important;
+  border: none !important;
+}
+.dark .new_post .post div:hover {
+  background: #52525263 !important;
+}
+.dark .popupForm .input_color .cancel button {
+  color: white !important;
+  border: 1px solid white !important;
+}
+.dark .popupForm {
+  background-color: #242526 !important;
+  border-radius: 5px;
+  color: white;
+  box-shadow: none !important;
+}
+
+.create_post {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 400px;
+  max-width: 100%;
+  position: absolute;
+  left: 25%;
+  top: 12%;
+  z-index: 2;
+}
+.create_post .toast {
+  position: fixed;
+  border-radius: 12px;
+  background: #ffcccc;
+  padding: 20px 35px 20px 25px;
+  box-shadow: 0 6px 20px -5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transform: translateX(calc(-350% + 30px));
+  top: 89%;
+  left: -23%;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+}
+.create_post .toast.active {
+  transform: translateX(84%);
+}
+.create_post .toast .toast-content {
+  display: flex;
+  align-items: center;
+}
+.create_post .toast-content .check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+  min-width: 35px;
+  background-color: #4070f4;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 50%;
+}
+.create_post .toast-content .message {
+  display: flex;
+  flex-direction: column;
+  margin: 0 20px;
+}
+.create_post .message .text {
+  font-size: 16px;
+  font-weight: 400;
+  color: #990000;
+}
+.create_post .message .text.text-1 {
+  font-weight: 600;
+  color: #990000;
+}
+.create_post .toast .close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  padding: 5px;
+  cursor: pointer;
+  opacity: 0.7;
+}
+.create_post .toast .close:hover {
+  opacity: 1;
+}
+.create_post .toast .progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+}
+.create_post .toast .progress:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #4070f4;
+}
+.create_post .progress.active:before {
+  animation: progress 5s linear forwards;
+}
+.create_post .title h4 {
+  color: #f9bc2d;
+}
+.create_post .new_post {
+  min-width: 450px;
+  max-width: 100%;
+  padding: 15px;
+  display: flex;
+  gap: 10px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  align-items: center;
+  border-radius: 8px;
+}
+.create_post .new_post img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+.create_post .new_post .post {
+  padding-left: 5px;
+  width: 320px;
+  max-width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+}
+.create_post .new_post .post div {
+  border: 1px solid #f6f6f8;
+  background: #fafafa;
+  padding-left: 15px;
+  border-radius: 30px;
+  width: 350px;
+  height: 35px;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+}
+.create_post .new_post .post div p {
+  color: #999;
+  font-size: 14px;
+  width: 100vh;
+}
+.create_post .new_post .post div:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+.create_post .popupForm {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  z-index: 99999;
+  animation: fadeIn 0.3s ease-in-out;
+  background: white;
+  border-radius: 6px;
+  transition: 0.6s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  display: none;
+}
+.create_post .popupForm form > div.buttons > div.submit > input[type=submit] {
+  display: flex;
+  border: 1px solid;
+  border-radius: 4px;
+  color: #f9bc2d !important;
+  transition: 0.5s;
+  cursor: pointer;
+  padding: 4px;
+  width: 76px;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  font-size: 17px;
+}
+.create_post .popupForm form > div.buttons > div.submit > input[type=submit]:hover {
+  background-color: #f9bc2d;
+  color: white !important;
+}
+.create_post .popupForm.active {
+  display: flex;
+}
+.create_post .popupForm .title {
+  margin-top: -6px;
+}
+.create_post .popupForm .title p {
+  color: #f9bc2d;
+  text-align: center;
+}
+.create_post .popupForm .line {
+  margin-top: 8px;
+}
+.create_post .popupForm .user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+.create_post .popupForm .user img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+.create_post .popupForm form .input {
+  margin-top: 20px;
+  padding-left: 5px;
+}
+.create_post .popupForm form .input textarea {
+  border: none;
+  outline: none;
+}
+.create_post .popupForm .input_color {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.create_post .popupForm .input_color .cancel {
+  margin-top: 24px;
+}
+.create_post .popupForm .input_color .cancel button {
+  background: none;
+  border: none;
+  border-radius: 8px;
+  border: 1px solid #111;
+  outline: none;
+  padding: 5px;
+  cursor: pointer;
+}
+.create_post .popupForm .photo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+.create_post .popupForm .photo img {
+  width: 30px;
+  cursor: pointer;
+}
+.create_post .popupForm .photo .text p button {
+  background: none;
+  border: none;
+  border-radius: 8px;
+  border: 1px solid #111;
+  outline: none;
+  padding: 5px;
+  cursor: pointer;
+  width: 125px;
+}
+.create_post .popupForm .accessibility {
+  display: flex;
+  gap: 25px;
+  margin-top: 12px;
+}
+.create_post .popupForm .accessibility div {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.create_post .popupForm .buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5%;
+  align-items: center;
+}
+.create_post .popupForm .buttons .cancel {
+  display: flex;
+  border: 1px solid;
+  border-radius: 4px;
+  color: #f9bc2d;
+  transition: 0.5s;
+  cursor: pointer;
+  padding: 4px;
+  width: 65px;
+  align-items: center;
+  justify-content: center;
+}
+.create_post .popupForm .buttons .cancel:hover {
+  background-color: #f9bc2d;
+  color: white;
+}
+.create_post .popupForm .buttons .submit button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 77px;
+  display: flex;
+  border: 1px solid;
+  border-radius: 4px;
+  color: #f9bc2d;
+  transition: 0.5s;
+  cursor: pointer;
+  background: none;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 17px;
+  padding: 4px;
+  font-weight: 300;
+}
+.create_post .popupForm .buttons .submit button:hover {
+  background-color: #f9bc2d;
+  color: white;
+}
+.create_post .overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9998;
+}
+.create_post .overlay.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+@media (max-width: 992px) {
+  .create_post {
+    left: 4%;
+  }
+}
+@media (max-width: 520px) {
+  .create_post .new_post {
+    min-width: 380px;
+  }
+}
+@media (max-width: 445px) {
+  .create_post {
+    width: fit-content;
+  }
+  .create_post .new_post {
+    min-width: 150px;
+  }
+}
+@media (max-width: 414px) {
+  .create_post {
+    width: 261px;
+  }
+  .create_post .new_post .post {
+    padding-left: 0;
+    width: 190px;
+  }
+}
+@media (max-width: 992px) {
+  .create_post {
+    margin-top: 15%;
+    margin-left: 36px;
+    position: unset;
+  }
+}
+@media (max-width: 503px) {
+  .create_post {
+    margin-top: 36%;
+  }
+}
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/*# sourceMappingURL=create_post.css.map */

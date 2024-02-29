@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Signika:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;1,200;1,300;1,400&family=Signika:wght@300;400;500;600&display=swap");
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.dark {
+  color: light;
+  background-color: #111;
+}
+.dark .register_nav .links .buttons ul .them button {
+  color: white !important;
+}
+.dark .nav .links .buttons ul .them button {
+  color: white;
+}
+.dark .nav .links .buttons ul .login a {
+  color: white !important;
+}
+.dark .main .left .title h2 {
+  color: white;
+}
+
+.register_container {
+  padding-top: 17px;
+  padding-left: 30px;
+  padding-right: 30px;
+  height: 98.9vh;
+}
+.register_container .register_nav .links {
+  display: flex;
+  justify-content: space-between;
+}
+.register_container .register_nav .links .buttons ul {
+  display: flex;
+  gap: 25px;
+}
+.register_container .register_nav .links .buttons ul .them button {
+  background: none;
+  border: none;
+}
+.register_container .register_nav .links .buttons ul .login a {
+  text-decoration: none;
+  color: #f9bc2d;
+  font-size: 18px;
+}
+.register_container .logo a {
+  text-decoration: none;
+  color: #561bff;
+}
+.register_container .main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10%;
+}
+.register_container .main .title h2 {
+  color: #191e1d;
+  font-size: 30px;
+}
+.register_container .main .left {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.register_container .main .left form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.register_container .main .left form .input .error {
+  width: 410px;
+  padding-left: 11px;
+  display: flex;
+  align-items: center;
+  border-radius: 3px;
+  margin-top: 17px;
+  font-size: 15px;
+  height: 36px;
+  background: #ffcccc;
+  color: #990000;
+}
+.register_container .main .left form .input input {
+  border: none;
+  background-color: #f4f4fa;
+  border-radius: 7px;
+  width: 400px;
+  height: 45px;
+  outline: none;
+  padding-left: 20px;
+}
+.register_container .main .left .button {
+  margin-left: 5px;
+}
+.register_container .main .left .button button {
+  background-color: #561bff;
+  color: white;
+  border: none;
+  width: 138px;
+  height: 45px;
+  border-radius: 29px;
+  font-size: 15px;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.register_container .main .left .button button:hover {
+  background-color: #f9bc2d;
+}
+
+@media (max-width: 1050px) {
+  .register_container .right img {
+    display: none;
+  }
+}
+@media (max-width: 455px) {
+  .register_container .main .left form .input input {
+    width: 350px;
+  }
+}
+@media (max-width: 400px) {
+  .register_container .main .left form .input input {
+    width: 300px;
+  }
+}
+@media (max-width: 415px) {
+  .register_container .logo a {
+    font-size: 12px;
+  }
+}
+
+/*# sourceMappingURL=register.css.map */

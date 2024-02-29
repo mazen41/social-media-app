@@ -1,0 +1,34 @@
+@media (max-width: 992px){
+    .side {
+      display: none;
+    }
+   
+}
+.dashboard {
+  width: 100vw;
+  margin-left: -20px;
+}
+.dark {
+  background: rgb(0, 0, 0);   
+}
+.side-bar .dark {
+  background: #111;
+}
+.side-bar {
+  height: 100vh;
+  position: fixed;
+}
+@media (max-width: 841px) {
+  .navbar {
+    // margin-left: 26px;
+  }
+  .dashboard {
+    margin-left: -20px;
+  }
+}
+
+// @media (max-width: 760px) {
+//   .dashboard {
+//     margin-left: -60px;
+//   }
+// }

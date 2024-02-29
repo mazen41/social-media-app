@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;1,200;1,300;1,400&family=Signika:wght@300;400;500;600&display=swap");
+$logo-color: #561bff;
+body {
+  background-color: #ffff;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+* {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  font-family: "Noto Sans", sans-serif;
+}
+.light {
+  background-color: #ffff;
+}
+.dark {
+  color: light;
+  background-color: #111;
+  .nav {
+    .links {
+      .buttons {
+        ul {
+          .them {
+            button {
+              color: white;
+            }
+          }
+          .login {
+            a {
+              color: white !important;
+            }
+          }
+        }
+      }
+    }
+  }
+  .main {
+    .left {
+      .welcome {
+        h2 {
+          color: white;
+        }
+        p {
+          color: white !important;
+        }
+      }
+    }
+  }
+}
+.container {
+  padding-top: 17px;
+  padding-left: 30px;
+  padding-right: 30px;
+  height: 98.5vh;
+  .nav {
+    .links {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      .logo {
+        color: $logo-color;
+        font-size: 14px;
+      }
+      .buttons {
+        ul {
+          display: flex;
+          gap: 20px;
+          flex-wrap: wrap;
+          .them {
+            cursor: pointer;
+            margin-top: 7px;
+            button {
+              cursor: pointer;
+              background: none;
+              border: none;
+            }
+          }
+          .register {
+            background-color: none;
+            border: 2px solid #f9bc2d;
+            border-radius: 18px;
+            width: 100px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            transition: 0.4s;
+            height: 38px;
+            cursor: pointer;
+            a {
+              color: #f9bc2d;
+              align-self: center;
+              margin-top: -5px;
+              font-size: 17px;
+              font-weight: bold;
+            }
+          }
+          .register:hover {
+            background-color: #f9bc2d;
+
+            a {
+              color: white;
+            }
+          }
+          .login {
+            align-self: center;
+            margin-top: -3px;
+            cursor: pointer;
+            a {
+              color: #191e1d;
+              font-size: 17px;
+              font-weight: bold;
+            }
+          }
+          li {
+            a {
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  .main {
+    display: flex;
+    margin-top: 127px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .left {
+      align-self: center;
+      .title {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+
+        .welcome {
+          display: flex;
+          flex-direction: column;
+          gap: 18px;
+          h2 {
+            font-size: 41px;
+            max-width: 585px;
+            // color: #191e1d;
+          }
+          p {
+            color: #919190;
+            padding-left: 2px;
+            max-width: 370px;
+          }
+        }
+        .button {
+          button {
+            background-color: #561bff;
+            color: white;
+            border: none;
+            width: 138px;
+            height: 45px;
+            border-radius: 29px;
+            font-size: 15px;
+            text-align: center;
+            font-weight: bold;
+            transition: 0.4s;
+            cursor: pointer;
+          }
+          button:hover {
+            background-color: #f9bc2d;
+          }
+        }
+      }
+    }
+  }
+}
+@media(max-width: 1050px) {
+  .container .right img {
+    display: none;
+  } 
+}

@@ -1,0 +1,435 @@
+.selecetd_post {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  left: 35%;
+  top: 15%;
+  z-index: 999999;
+  background: white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 4px;
+  width: 450px;
+  height: 600px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+
+  .title {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 11px;
+    align-items: center;
+    gap: 10px;
+    padding-top: 45px;
+    min-width: 100%;
+    background: #52525263 !important;
+    box-shadow: rgba(50, 50, 50, 0.2) 0px 8px 24px !important;
+
+    .into {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      margin-top: -33px;
+      position: fixed;
+      // background: #18191A;
+      background: white;
+      border-radius: 8px;
+      padding: 11px;
+
+      span {
+        opacity: 0.6;
+        transition: 0.5s;
+      }
+
+      span:hover {
+        opacity: 1;
+      }
+    }
+
+    img {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+    }
+  }
+
+
+
+  .post_title {
+    max-width: 450px;
+    margin-top: 60px;
+    padding: 18px;
+
+    button {
+      border: none;
+      color: #4070f4;
+      background: none;
+      cursor: pointer;
+    }
+  }
+
+  .post_image {
+    margin-top: 20px;
+
+    img {
+      width: 375px;
+      border-radius: 5px;
+    }
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .reset_of_post {
+    // display: flex;
+    // justify-content: space-evenly;
+    // margin-top: 23px;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 23px;
+    max-height: 50px;
+    padding-bottom: 8px;
+
+    div {
+      display: flex;
+      gap: 5px;
+      cursor: pointer;
+      transition: 0.6s;
+    }
+
+
+  }
+
+  .comments {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    height: 100%;
+    margin-left: 10px;
+    align-items: start;
+
+    .comment {
+      display: flex;
+      gap: 8px;
+      flex-direction: column;
+
+      .replies {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-left: -20px;
+        margin-top: 22px;
+
+        .reply {
+          display: flex;
+          gap: 9px;
+          flex-direction: column;
+          margin-left: 68px;
+
+          .reply_user {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            img {
+              width: 35px;
+              height: 35px;
+              border-radius: 50%;
+            }
+
+            .reply_content {
+              background: #F0F2F5;
+              border-radius: 5px;
+              min-width: 244px;
+              // height: 35px;
+              display: flex;
+              padding-left: 6px;
+              flex-direction: column;
+
+              .content {
+                display: flex;
+                align-items: center;
+                padding: 8px;
+                max-width: 270px;
+
+                p {
+                  button {
+                    border: none;
+                    color: #4070f4;
+                    background: none;
+                    cursor: pointer;
+                  }
+                }
+              }
+            }
+          }
+
+          .reply_information {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-top: 7px;
+
+            div {
+              display: flex;
+              gap: 5px;
+              transition: 0.5s;
+              cursor: pointer;
+            }
+
+
+          }
+        }
+      }
+
+      .comment_user {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .comment_content {
+          background: #F0F2F5;
+          border-radius: 5px;
+          display: flex;
+          flex-direction: column;
+          padding: 12px;
+
+          p {
+            button {
+              border: none;
+              color: #4070f4;
+              background: none;
+              cursor: pointer;
+            }
+          }
+        }
+
+        img {
+          width: 35px;
+          height: 35px;
+          border-radius: 50%;
+        }
+      }
+
+      .comment_information {
+        display: flex;
+        // justify-content: space-evenly;
+        gap: 21px;
+        margin-left: 53px;
+
+        margin-top: 15px;
+        // padding-right: 10px;
+        align-items: center;
+
+        // margin-left: 15px;
+        // min-width: 150px;
+        div {
+          display: flex;
+          gap: 6px;
+          transition: 0.5s;
+          cursor: pointer;
+        }
+
+
+      }
+    }
+  }
+
+  .create_comment {
+    display: flex;
+    align-items: center;
+    background: white;
+    width: 100%;
+
+    form {
+      display: flex;
+      align-items: center;
+      background: #7a7979;
+      padding: 11px;
+      border-radius: 8px;
+      top: 62%;
+      width: 428px;
+      margin-top: 2px;
+      position: fixed;
+
+      .input {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        span {
+          margin-left: -84px;
+        }
+
+        textarea {
+          width: 340px;
+          background: rgb(240, 242, 245);
+          border-radius: 5px;
+          outline: none;
+          height: 55px;
+          padding-left: 6px;
+          margin-left: 14px;
+          padding-top: 7px;
+          border: none;
+        }
+
+        .submit {
+          position: absolute;
+          left: 95%;
+          cursor: pointer;
+          color: dodgerblue;
+        }
+
+      }
+    }
+  }
+
+  .new_reply {
+    position: fixed;
+    top: 38%;
+    left: 37%;
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    z-index: 999999999999999;
+    width: 365px;
+    display: flex;
+    align-items: center;
+    padding: 17px;
+    border-radius: 8px;
+
+    .form {
+      .input {
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+
+        span {
+          position: absolute;
+          left: 91%;
+          top: 29%;
+          color: cornflowerblue;
+          cursor: pointer;
+        }
+
+        .replyToUser {
+          position: absolute;
+          left: 7%;
+          top: 12%;
+          background: #f9bc2d;
+          font-weight: 400;
+          border-radius: 5px;
+          padding-left: 15px;
+          padding-right: 13px;
+          font-size: 13px;
+          padding-bottom: 3px;
+          cursor: pointer;
+
+          .p {
+            transition: 0.6s;
+          }
+
+          p:hover {
+            color: #561bff;
+          }
+        }
+
+        .replyToUser {
+          transition: 0.6s;
+        }
+      }
+
+      textarea {
+        background: #f0f2f5;
+        border-radius: 5px;
+        outline: none;
+        height: 55px;
+        padding-left: 140px;
+        margin-left: 14px;
+        padding-top: 7px;
+        border: none;
+        min-width: 193px;
+      }
+
+      .submit {
+        margin-left: 16px;
+        margin-top: 14px;
+        cursor: pointer;
+
+        button {
+          border: none;
+          background: #f9bc2d;
+          border-radius: 8px;
+          font-size: 15px;
+          width: 107px;
+          padding: 5px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .reply_overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #d4d9e17a;
+    z-index: 999999999999998;
+  }
+}
+
+.selecetd_post::-webkit-scrollbar {
+  width: 8px;
+}
+
+.selecetd_post::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+.selecetd_post::-webkit-scrollbar-thumb {
+  background: #f9bc2d;
+  border-radius: 10px;
+}
+
+
+
+@media (max-width: 700px) {
+  .selecetd_post {
+    left: 15%;
+  }
+
+  .selecetd_post .new_reply {
+    left: 20%;
+  }
+}
+
+
+@media (max-width: 532px) {
+  .selecetd_post {
+    // left: 15%;
+    width: 400px;
+    left: 4%;
+  }
+
+  .selecetd_post .new_reply {
+    width: 342px;
+    left: 6%;
+    ;
+  }
+
+  .selecetd_post .new_reply .input {
+    margin-left: -12px;
+
+  }
+
+  .selecetd_post .create_comment form {
+    width: 370px;
+
+    .input span {
+      margin-left: -46px !important;
+    }
+  }
+}
